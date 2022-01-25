@@ -1,5 +1,6 @@
 <?php
-
+//conexion con la base de datos
+include("conectar_bd.php"); 
 ?>
 
 <!DOCTYPE html>
@@ -9,15 +10,14 @@
     <title></title>
   </head>
   <body>
+    
     <legend>Introduce los datos de tu usuario:</legend>
-        </br>
+        
         <legend>Información de usuario:</legend>
-        </br>
-        <label for="usuario">Usuario<label>
-        <input type="text" id="usuario" name="usuario">
-        </br>
-        <label for="contraseña">Contraseña</label>
-        <input type="password" id="contraseña" name="password">
-        <input type="submit" value="Enviar">
-  </body>
+        <form action = "login_back.php"> 
+        <p>Nombre:<input type="text" name="user"></p>
+        <p>Contraseña:<input type="password" name="passwd"></p>
+        <input type="submit" value="login">
+    </form>
+      </body>
 </html>
