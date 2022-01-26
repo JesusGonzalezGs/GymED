@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GYM ED</title>
+    <title>Gimnasio ED</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">    
 </head>
 <body>
 <span>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img src="src/Logo1.jpg" alt="logo" height="50" width="50"></a>
+        <a class="navbar-brand" href="#"><img src="src/Logo1.jpg" alt="" height="50" width="50"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -35,18 +35,23 @@
             <li class="nav-item active">
               <a class="nav-link" href="#">Reservas</a>
             </li>
+            
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">**USUARIO**</a>
+            </li>
           </ul>
-         
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
-          <a class="nav-link active" href="#"><img src="src/user.png" alt="login" height="38" width="38"></a>
         </div>
       </nav>
+    <div id="derecha"><h1>Bienvenido/a al GymED</h1> <p > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget arcu vel justo auctor tincidunt. Etiam elementum ipsum a justo fermentum mollis. Aenean tristique finibus nunc, non faucibus nibh placerat sed. Mauris dictum porttitor tincidunt. Duis vitae rutrum sem, tristique commodo nunc. Mauris molestie vel est porta porta. Donec et fermentum sem. Phasellus dapibus at leo eu finibus. Etiam vel sem felis. Vestibulum vulputate lacus facilisis quam condimentum ultrices. Aliquam mollis sit amet neque ac ultrices.
 
+Quisque vulputate commodo ligula ac eleifend. Ut tempus nulla eros, eget blandit purus ornare sollicitudin. In finibus tellus ipsum, vitae tristique purus condimentum id. Phasellus cursus diam non vehicula venenatis. Vestibulum vulputate ut metus eget pellentesque. Proin sit amet diam est. Donec semper justo et nisi congue, nec scelerisque nisi interdum.
 
-
+Morbi condimentum diam pharetra augue bibendum, at venenatis nibh convallis </p></div>
+    <div id="izquierda"> <img aline="left" src="src/img/genteejercitando.jpg" alt="Gente Ejercitando" height="400" width="400"></div>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
