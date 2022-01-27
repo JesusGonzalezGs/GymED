@@ -72,10 +72,10 @@ session_start();
                 border-radius: 20px;
                 text-align:center;" >
                 
-        <form >
+        <form action ="registro_back.php">
             <p><input style="margin-top: 10px; border-radius: 10px; width: 80%;" type="text" placeholder="Nombre" name= "user"></p>
             <p><input style="margin-top: 10px; border-radius: 10px; width: 80%;" type="text" placeholder="Apellido" name= "apellido"></p>
-            <p><input style="margin-top: 10px; border-radius: 10px; width: 80%;" type="email" placeholder="correo electronico" name= "email"></p>
+            <p><input style="margin-top: 10px; border-radius: 10px; width: 80%;" type="text" placeholder="correo electronico" name= "email"></p>
             <p><input style="margin-top: 10px; border-radius: 10px; width: 80%;" type="password" placeholder="Contrasenya" name= "passwd"></p>
             <button class="registro" type="submit" >Registrate</button>
         </form>
