@@ -1,6 +1,14 @@
 <?php
+//incluimos las librerias que usaremos
+include('libreria_general.php');
+//creacion de la sesion y variables necesarias
+session_start();
+$login = $_SESSION["login"];
+$nombre = $_SESSION["nombre"];
+$_SESSION['last_url'] = "localhost".$_SERVER['REQUEST_URI'];
 //conexion con la base de datos
 include("conectar_bd.php"); 
+
 ?>
 
 <!DOCTYPE html>
@@ -10,14 +18,6 @@ include("conectar_bd.php");
     <title></title>
   </head>
   <body>
-    
-    <legend>Introduce los datos de tu usuario:</legend>
-        
-        <legend>Información de usuario:</legend>
-        <form action = "login_back.php"> 
-        <p>Nombre:<input type="text" name="user"></p>
-        <p>Contraseña:<input type="password" name="passwd"></p>
-        <input type="submit" value="login">
-    </form>
+      <?php  login();?>
       </body>
 </html>
