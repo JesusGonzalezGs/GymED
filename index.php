@@ -1,3 +1,10 @@
+<?php
+//incluimos las librerias que usaremos
+include('libreria_general.php');
+include("conectar_bd.php"); 
+//creacion de la sesion y variables necesarias
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -26,7 +33,6 @@
                   <a class="dropdown-item" href="#">Actividades</a>
                   <a class="dropdown-item" href="#">Piscina</a>
                   <a class="dropdown-item" href="#">Complementos</a>
-  
                 </div>
             </li>
             <li class="nav-item active">
@@ -36,8 +42,8 @@
               <a class="nav-link" href="#">Reservas</a>
             </li>
             
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">**USUARIO**</a>
+            <li class="nav-item dropdown active">
+            <?php login_nav(); ?>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
