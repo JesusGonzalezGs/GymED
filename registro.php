@@ -12,7 +12,17 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gimnasio ED</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">    
+    <link rel="stylesheet" href="css/bootstrap.min.css">  
+    <style>
+           .registro{
+            margin-bottom: 10px; 
+            border-radius: 10px; 
+            width: 25%;
+           }
+           .registro:hover{
+               background-color: grey;
+           }
+        </style>  
 </head>
 <body>
 <span>
@@ -52,15 +62,27 @@ session_start();
           </form>
         </div>
       </nav>
-    <div id="derecha"><h1>Bienvenido/a al GymED</h1> <p > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget arcu vel justo auctor tincidunt. Etiam elementum ipsum a justo fermentum mollis. Aenean tristique finibus nunc, non faucibus nibh placerat sed. Mauris dictum porttitor tincidunt. Duis vitae rutrum sem, tristique commodo nunc. Mauris molestie vel est porta porta. Donec et fermentum sem. Phasellus dapibus at leo eu finibus. Etiam vel sem felis. Vestibulum vulputate lacus facilisis quam condimentum ultrices. Aliquam mollis sit amet neque ac ultrices.
+    <div >
+        
+        <div style=" background-color: grey;
+                height: 20%;
+                width: 30%;
+                margin-top: 20px;
+                margin-left:33%;
+                border-radius: 20px;
+                text-align:center;" >
+                
+        <form >
+            <p><input style="margin-top: 10px; border-radius: 10px; width: 80%;" type="text" placeholder="Nombre" name= "user"></p>
+            <p><input style="margin-top: 10px; border-radius: 10px; width: 80%;" type="text" placeholder="Apellido" name= "apellido"></p>
+            <p><input style="margin-top: 10px; border-radius: 10px; width: 80%;" type="email" placeholder="correo electronico" name= "email"></p>
+            <p><input style="margin-top: 10px; border-radius: 10px; width: 80%;" type="password" placeholder="Contrasenya" name= "passwd"></p>
+            <button class="registro" type="submit" >Registrate</button>
+        </form>
 
-Quisque vulputate commodo ligula ac eleifend. Ut tempus nulla eros, eget blandit purus ornare sollicitudin. In finibus tellus ipsum, vitae tristique purus condimentum id. Phasellus cursus diam non vehicula venenatis. Vestibulum vulputate ut metus eget pellentesque. Proin sit amet diam est. Donec semper justo et nisi congue, nec scelerisque nisi interdum.
+    </div>
+    </div>
 
-Morbi condimentum diam pharetra augue bibendum, at venenatis nibh convallis </p></div>
-    <div id="izquierda"> <img aline="left" src="src/img/genteejercitando.jpg" alt="Gente Ejercitando" height="400" width="400"></div>
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
 </body>
 
 

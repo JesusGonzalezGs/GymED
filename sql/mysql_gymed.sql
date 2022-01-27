@@ -8,15 +8,16 @@ use GYMED;
 
 create table usuarios(
 id int primary key not null auto_increment,
+correo varchar(50),
 nombre varchar(20) not null,
 apellidos varchar(40) ,
 hash_pwd varchar(200),
 dni varchar(9)
 );
 
-insert into usuarios (nombre, apellidos, hash_pwd,dni) values
-("admin","","21232f297a57a5a743894a0e4a801fc3","99999999Y"),
-("usuario","usuario","f8032d5cae3de20fcec887f395ec9a6a","11111111Y");
+insert into usuarios (correo,nombre, apellidos, hash_pwd,dni) values
+("admin@admin.com","admin","","21232f297a57a5a743894a0e4a801fc3","99999999Y"),
+("usuario@usuario.com","usuario","usuario","f8032d5cae3de20fcec887f395ec9a6a","11111111Y");
 
 	-- nombre,actividades, apellido, id, dni, hash...
 create table actividades(
