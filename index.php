@@ -17,7 +17,7 @@ session_start();
 <body>
 <span>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img src="src/Logo1.jpg" alt="" height="50" width="50"></a>
+        <a class="navbar-brand" href="index.php"><img src="src/Logo1.jpg" alt="" height="50" width="50"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -66,11 +66,11 @@ Morbi condimentum diam pharetra augue bibendum, at venenatis nibh convallis </p>
 
 
 <!-- Footer -->
-<footer class="page-footer font-small cyan lighten-5">
+<footer style="background-color: grey;"class="page-footer font-small cyan lighten-5">
 
-  <div class="container text-center text-md-left mt-5">
+  <div   class="container text-center text-md-left mt-5">
 
-    <div class="row mt-3 dark-grey-text">
+    <div  class="row mt-3 dark-grey-text">
  
       <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
 
