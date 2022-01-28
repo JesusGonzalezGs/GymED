@@ -41,7 +41,15 @@ body{
   float:left;
   text-align: right;
 }
-
+.register{
+  background-color: grey;
+                height: 20%;
+                width: 30%;
+                margin-top: 20px;
+                margin-left:33%;
+                border-radius: 20px;
+                text-align:center;
+}
 .registro{
     margin-bottom: 10px; 
     border-radius: 10px; 
@@ -65,3 +73,8 @@ body{
     border-radius: 10px; 
     width: 80%;
    }
+
+   .cuerpo{
+     min-height: 600px;
+   }
+   

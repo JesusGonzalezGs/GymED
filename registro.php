@@ -64,16 +64,9 @@ session_start();
           
         </div>
       </nav>
-    <div >
+    <div class="cuerpo">
         
-        <div style=" background-color: grey;
-                height: 20%;
-                width: 30%;
-                margin-top: 20px;
-                margin-left:33%;
-                border-radius: 20px;
-                text-align:center;" >
-                
+        <div class="register">
         <form action ="registro_back.php">
             <p><input style="margin-top: 10px; border-radius: 10px; width: 80%;" type="text" placeholder="Nombre" name= "user" > </p>
             <p><input style="margin-top: 10px; border-radius: 10px; width: 80%;" type="text" placeholder="Apellido" name= "apellido"></p>

@@ -37,7 +37,7 @@ function login(){
           </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         <a class="dropdown-item" href="usuario.php">Mi perfil</a>
-        <a class="dropdown-item" href="#">Mis reservas</a>
+        <a class="dropdown-item" href="reservas_usuario.php">Mis reservas</a>
         <a class="dropdown-item" href="deslog.php">Cerrar sesion</a>
         </div>
         FAP;
@@ -50,18 +50,18 @@ echo <<< FAP
 <div class="footer">
       <div id='foot_left'>
       <ul>
-        <li><a href='#'>Servicios</a></li>
-        <li><a href='#'>Actividades</a></li>
-        <li><a href='#'>Reservas</a></li>
-        <li><a href='#'>Usuario</a></li>
+        <li><a href='servicios.php'>Servicios</a></li>
+        <li><a href='actividades.php'>Actividades</a></li>
+        <li><a href='reservas.php'>Reservas</a></li>
+        <li><a href='usuario.php'>Usuario</a></li>
       </ul>
     </div>
      
       <div id='foot_right'>
       <ul >
-        <li><a href='#'>Politica de privacidad</a></li>
-        <li><a href='#'>Cookies</a></li>
-        <li><a href='#'>FAQ</a></li>
+        <li><a href='pilitica.php'>Politica de privacidad</a></li>
+        <li><a href='cookies.php'>Cookies</a></li>
+        <li><a href='faq.php'>FAQ</a></li>
         <li><a href='index.php'><img src="src/Logo2.jpg" alt="" height="40" width="150"></a></li>
       </ul>
     </div>

@@ -4,7 +4,7 @@ include("sql/conectar_bd.php");
 session_start();
 
 //pillamos el usuario y la contraseña introducidos
-$user = $_GET['email'];
+$email = $_GET['email'];
 $passwd = $_GET['passwd'];
 //pasamos la contraseña por el md5  para comparar despues
 $passwd = md5($passwd);
@@ -18,10 +18,11 @@ if ($con->connect_errno) {
     echo "conexion ok";
 }*/
 //sentencia y realizacion de conexion;
-$sentencia = "SELECT hash_pwd FROM usuarios where correo = \"$user\"";
+$sentencia = "SELECT hash_pwd,nombre FROM usuarios where correo = \"$email\"";
 $respuesta = mysqli_query($con,$sentencia);
 while ( $rows = $respuesta->fetch_assoc() ) {
     $hash= $rows[hash_pwd];
+    $user=$rows[nombre];
 }
 //compruebo que los hases son los mismos 
 if ($passwd == $hash){
