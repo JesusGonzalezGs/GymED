@@ -8,15 +8,15 @@ use GYMED;
 
 create table usuarios(
 id int primary key not null auto_increment,
-correo varchar(50),
+correo varchar(50) unique,
 nombre varchar(20) not null,
 apellidos varchar(40) ,
 hash_pwd varchar(200),
-dni varchar(9)
+dni varchar(9) unique
 );
-
+-- los usuarios de prueba sera admin y usuario, sus pass son igual que sus nombres
 insert into usuarios (correo,nombre, apellidos, hash_pwd,dni) values
-("admin@admin.com","admin","","21232f297a57a5a743894a0e4a801fc3","99999999Y"),
+("admin@admin.com","admin","","21232f297a57a5a743894a0e4a801fc3","99999999Y"), 
 ("usuario@usuario.com","usuario","usuario","f8032d5cae3de20fcec887f395ec9a6a","11111111Y");
 
 	-- nombre,actividades, apellido, id, dni, hash...

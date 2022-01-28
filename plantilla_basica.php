@@ -12,20 +12,22 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gimnasio ED</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">  
-    <style>
-           .registro{
-            margin-bottom: 10px; 
-            border-radius: 10px; 
-            width: 25%;
-           }
-           .registro:hover{
-               background-color: grey;
-           }
-        </style> 
-        <script src="js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+          
+            body {
+            margin: 0;
+            margin-bottom: 40px;
+            }
+            footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            }
+        </style> 
 </head>
 <body>
 <span>
@@ -73,33 +75,16 @@ session_start();
           
         </div>
       </nav>
-    <div >
-        
-        <div style=" background-color: grey;
-                height: 20%;
-                width: 30%;
-                margin-top: 20px;
-                margin-left:33%;
-                border-radius: 20px;
-                text-align:center;" >
-                
-        <form action ="registro_back.php">
-            <p><input style="margin-top: 10px; border-radius: 10px; width: 80%;" type="text" placeholder="Nombre" name= "user" > </p>
-            <p><input style="margin-top: 10px; border-radius: 10px; width: 80%;" type="text" placeholder="Apellido" name= "apellido"></p>
-            <p><input style="margin-top: 10px; border-radius: 10px; width: 80%;" type="text" placeholder="correo electronico" name= "email"></p>
-            <p><input style="margin-top: 10px; border-radius: 10px; width: 80%;" type="password" placeholder="Contrasenya" name= "passwd"></p>
-            <p style = "color:red;"><?php error_reg();?></p>
-            <button class="registro" type="submit" >Registrate</button>
-        </form>
-
-    </div>
-    </div>
       
+
+
+    <div>
+ <!-- Aqui va lo grueso ya tu sabe-->
+  </div>
+  
 </body>
 
-
-
-<!-- Footer -->
+      <!-- Footer -->
 <?php footer();?>
 
 </html>
