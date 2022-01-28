@@ -24,6 +24,7 @@ session_start();
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
+          
             <li class="nav-item dropdown active">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Servicios
@@ -42,25 +43,33 @@ session_start();
               <a class="nav-link" href="#">Reservas</a>
             </li>
             
+            </ul>
+            <ul style = "list-style-type: none; margin: 0; padding: 0;">
             <li class="nav-item dropdown active">
             <?php login_nav(); ?>
-            </li>
+          </li>
           </ul>
+          
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
+          
+          
+            
+          
         </div>
       </nav>
+      <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <div id="derecha"><h1>Bienvenido/a al GymED</h1> <p > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget arcu vel justo auctor tincidunt. Etiam elementum ipsum a justo fermentum mollis. Aenean tristique finibus nunc, non faucibus nibh placerat sed. Mauris dictum porttitor tincidunt. Duis vitae rutrum sem, tristique commodo nunc. Mauris molestie vel est porta porta. Donec et fermentum sem. Phasellus dapibus at leo eu finibus. Etiam vel sem felis. Vestibulum vulputate lacus facilisis quam condimentum ultrices. Aliquam mollis sit amet neque ac ultrices.
 
 Quisque vulputate commodo ligula ac eleifend. Ut tempus nulla eros, eget blandit purus ornare sollicitudin. In finibus tellus ipsum, vitae tristique purus condimentum id. Phasellus cursus diam non vehicula venenatis. Vestibulum vulputate ut metus eget pellentesque. Proin sit amet diam est. Donec semper justo et nisi congue, nec scelerisque nisi interdum.
 
 Morbi condimentum diam pharetra augue bibendum, at venenatis nibh convallis </p></div>
     <div id="izquierda"> <img aline="left" src="src/img/genteejercitando.jpg" alt="Gente Ejercitando" height="400" width="400"></div>
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    
 </body>
 
 
