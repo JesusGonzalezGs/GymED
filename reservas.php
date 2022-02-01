@@ -25,7 +25,7 @@ session_start();
 
 </head>
 <body style="">
-
+  <span>
   <!-- nav -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="index.php"><img src="src\img\GYM_ED_IMAGE.png" alt="" height="50" width="50"></a>
@@ -68,44 +68,42 @@ session_start();
           </form>  
         </div>
       </nav>
-          </span>
-<!-- nav -->
-<br>
+  </span>
+  <!-- nav -->
+  <br>
 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-4 justify-content-center text-center ">
-          <h1 id = "mes"></h1>
-          <br>
-          <div class="cal"&gt
-            <br>
-            <table class="table table-bordered table-responsive-sm" id="calendar">
-              <thead>
-                <tr id = "headers">
-                  <th>Lunes</th>
-                  <th>Martes</th>
-                  <th>Miercoles</th>
-                  <th>Jueves</th>
-                  <th>Viernes</th>
-                  <th>Sabado</th>
-                  <th>Domingo</th>
-                </tr>
-              </thead>
-              <tbody id="calendarBody">
-              </tbody>
-            </table>
-            <div class="form-inline justify-content-center text-center">
-              <button class="btn btn-outline-primary col-sm-3" id="pre" onclick="pre()" style="margin-right:30px;">Anterior</button>
-              <button class="btn btn-outline-primary col-sm-3" id="nex" onclick="nex()">Siguiente</button>
+    <div class="container">
+      <div class="row">
+        <div class="col-5 ">
+              <h1 id = "mes"></h1>
+              <br>
+              <div class="cal"&gt
+                <br>
+                <table class="table table-bordered table-responsive-sm table-hover" id="calendar">
+                  <thead>
+                    <tr id = "headers">
+                      <th>Lunes</th>
+                      <th>Martes</th>
+                      <th>Miercoles</th>
+                      <th>Jueves</th>
+                      <th>Viernes</th>
+                      <th>Sabado</th>
+                      <th>Domingo</th>
+                    </tr>
+                  </thead>
+                  <tbody id="calendarBody">
+                  </tbody>
+                </table>
+                <div class="form-inline justify-content-center text-center">
+                  <button class="btn btn-outline-primary col-sm-3" id="pre" onclick="pre()" style="margin-right:30px;">Anterior</button>
+                  <button class="btn btn-outline-primary col-sm-3" id="nex" onclick="nex()">Siguiente</button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="container col-lg-4 justify-content-center text-center ">
-      </div>  
-  </div>
-</div>
-
-
+            <div class="container col-lg-4 justify-content-center text-center ">
+          </div>  
+      </div>
+    </div>
 
 
       <div class="container justify-content-center text-center ">
@@ -123,12 +121,15 @@ session_start();
               
               <!-- Modal body -->
               <div class="modal-body" id="mensaje">
-                Modal body..
+                ¿Confrimamos su reserva para el siguiente dia?
+                <p id="infodate"></p>
               </div>
               
               <!-- Modal footer -->
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" style="width:20%">No</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" style="width:20%">Sí</button>
               </div>
               
             </div>
@@ -146,44 +147,65 @@ session_start();
 
 
           function calendar(month, years) {
+            daysweek = ["lun", "mar", "mié", "jue", "vie", "sáb", "dom"];
             monthtw = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
             daysmonth = ["31", "28", "31", "30", "31", "30", "31", "31", "30", "31", "30", "31"];
             elementmonth = document.getElementById("mes");
             elementmonth.innerHTML = monthtw[month] +" "+ year;
-            var tabla = document.getElementById("calendar");
+            var tabla = document.getElementById("calendarBody");
             tabla.innerHTML = "";
             
             var diasemana = 1;
             var fila = document.createElement("tr");
-            for (let index = 0; index < daysmonth[month]; index++) {
-              
+
+
+            var fiw = new Date(years, month, 1);
+            let firstDay = fiw.toLocaleString('es-ES', { weekday: 'short' });
+
+            var empezamos = false;
+            let contador = 0;
+
+
+            for (; contador < daysweek.length; contador++) {
+              if(daysweek[contador] == firstDay){
+                break;
+              }
+            }
+            
+            let finacel = parseInt(daysmonth[month]) + contador;
+
+            for (let index = 0; index < finacel; index++) {
+              diacuadri = index + 1 - contador;
+
               if (index!= 0 && index%7 == 0) {
                 var fila = document.createElement("tr");
               }
 
-              var link = document.createElement("a");
-              link.setAttribute('data-toggle','modal');
-              link.setAttribute('data-target','#myModal');
-              link.setAttribute('onclick','confirma()');
-              link.style.padding = "12px";
-              
-
-
               var celda = document.createElement("td");
               celda.setAttribute('class','td justify-content-center text-center');
-              
+
               if (index+1 == td.getDay() && month == (new Date()).getMonth()) {
                 celda.style.backgroundColor = "grey";
                 
               }
 
-              var diacelda = document.createTextNode(index+1);
-              link.appendChild(diacelda);
+              var link = document.createElement("a");
+              link.setAttribute('data-toggle','modal');
+              link.setAttribute('data-target','#myModal');
+              link.setAttribute('onclick','  confirm(event); return false;');
+              link.style.padding = "12px";
+              
+              
+              if (index-contador > -1) {
+                var diacelda = document.createTextNode(diacuadri);
+                link.appendChild(diacelda);
+              }
+              
               celda.appendChild(link);
               fila.appendChild(celda);
               
 
-              if (index%7 == 6 || index+1 == daysmonth[month]) {
+              if (index%7 == 6 || index+1 == finacel) {
 
                 tabla.appendChild(fila);
                 
@@ -203,20 +225,19 @@ session_start();
           }
 
           function nex() {
-            month = month +1;
+            month = month + 1;
 
-            if (month > 12) {
+            if (month > 11) {
               month = 0;
-              year = year +1;
+              year = year + 1;
             }
 
             calendar(month, year);
           }
 
-          function confirma() {
-            
+          function confirm(e) {
+            document.getElementById("infodate").innerHTML = e.target.innerText + " " + monthtw[month] + " " + year;
           }
-
           </script>
   
 
