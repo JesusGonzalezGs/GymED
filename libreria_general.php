@@ -23,7 +23,7 @@ function login(){
        if($_SESSION["login"] != true){
         echo <<< FAP
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <img src="src/user.png" alt="login" height="38" width="38">
+            <img src="src\user.png" alt="login" height="38" width="38">
           </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         FAP;
@@ -62,7 +62,7 @@ echo <<< FAP
         <li><a href='pilitica.php'>Politica de privacidad</a></li>
         <li><a href='cookies.php'>Cookies</a></li>
         <li><a href='faq.php'>FAQ</a></li>
-        <li><a href='index.php'><img src="src/Logo2.jpg" alt="" height="40" width="150"></a></li>
+        <li><a href='index.php'><img src="src\img\FULL_LOGO.png" alt="" height="40" width="150"></a></li>
       </ul>
     </div>
     <p>GymEd empresa ficticia, sin registro fiscal </p>
