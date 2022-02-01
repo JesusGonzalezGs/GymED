@@ -34,17 +34,17 @@ session_start();
                   Servicios
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Musculacion</a>
-                  <a class="dropdown-item" href="#">Actividades</a>
-                  <a class="dropdown-item" href="#">Piscina</a>
-                  <a class="dropdown-item" href="#">Complementos</a>
+                  <a class="dropdown-item" href="musculacion.php">Musculacion</a>
+                  <a class="dropdown-item" href="actividades.php">Actividades</a>
+                  <a class="dropdown-item" href="piscinas.php">Piscina</a>
+                  <a class="dropdown-item" href="complementos.php">Complementos</a>
                 </div>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Contacto</a>
+              <a class="nav-link" href="contacto.php">Contacto</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Reservas</a>
+              <a class="nav-link" href="reservas.php">Reservas</a>
             </li>
             
             </ul>

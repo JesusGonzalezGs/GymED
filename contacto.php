@@ -69,7 +69,45 @@ session_start();
 
     <div class="cuerpo">
  <!-- Aqui va lo grueso ya tu sabe-->
-      
+
+ <div class="container-fluid">
+   <div class="row">
+    <div style="margin-left: 30px; margin-right: 100px;" class="col">
+      <br>
+      <h1><u>Contacta con nosotros</u></h1>
+      <br>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias in tempore ad porro exercitationem facilis alias quo fuga labore voluptatum suscipit, voluptates impedit earum odit rerum eius perspiciatis! Magni, dolores.</p>
+      <br>
+      <br>
+      <img src="src/ginete-ejercitandose.jpg" alt="foto">
+    </div>
+
+    <div class="col-3 bg-secondary text-white" >
+      <br>
+      <br>
+      <h2 class="text-center"> <u>Información de contacto</u></h2>
+      <br>
+      <h3 style="margin-left: 46px">Dirección</h3>
+      <br>
+      <p style="margin-left: 46px">C/ Pepe Gandia Zizz 69 B</p>
+      <br>
+      <h3 style="margin-left: 46px">Horarios</h3>
+      <br>
+      <p style="margin-left: 46px">Lunes - Sábado = 7:00 - 23:00</p>
+      <p style="margin-left: 46px">Domingo = 7:00 - 14:00</p>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+   </div>
+   <div class="bg-secondary text-white">
+     <img src="src/telefono.jpg" alt="telefono" width="50px" height="50px">
+
+</div>
+ 
+ </div>
+ 
 </div>
   
 <!-- Footer -->

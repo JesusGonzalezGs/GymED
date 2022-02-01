@@ -65,9 +65,14 @@ session_start();
         </div>
       </nav>
           </span>
+<div class="cuerpo">
+
+          
     <div class="login" >
       <?php  login();?>
-    </div>  
+    </div>
+</div>  
       <?php footer();?>
       </body>
+      
 </html>
