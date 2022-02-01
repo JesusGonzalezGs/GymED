@@ -24,7 +24,7 @@ session_start();
 
 
 </head>
-<body>
+<body style="">
 
   <!-- nav -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -70,38 +70,43 @@ session_start();
       </nav>
           </span>
 <!-- nav -->
-
 <br>
-  <br>
-      <div class="container col-lg-4 justify-content-center text-center ">
-      
-      <h1 class="h1"> Reservas </h1>
-        <br>
-        <h2 id = "mes"></h1>
-        <br>
-        <div class="cal"&gt
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 justify-content-center text-center ">
+          <h1 id = "mes"></h1>
           <br>
-          <table class="table table-bordered table-responsive-sm" id="calendar">
-            <thead>
-              <tr id = "headers">
-                <th>Lunes</th>
-                <th>Martes</th>
-                <th>Miercoles</th>
-                <th>Jueves</th>
-                <th>Viernes</th>
-                <th>Sabado</th>
-                <th>Domingo</th>
-              </tr>
-            </thead>
-            <tbody id="calendarBody">
-            </tbody>
-          </table>
-          <div class="form-inline justify-content-center text-center">
-            <button class="btn btn-outline-primary col-sm-3" id="pre" onclick="pre()" style="margin-right:30px;">Anterior</button>
-            <button class="btn btn-outline-primary col-sm-3" id="nex" onclick="nex()">Siguiente</button>
+          <div class="cal"&gt
+            <br>
+            <table class="table table-bordered table-responsive-sm" id="calendar">
+              <thead>
+                <tr id = "headers">
+                  <th>Lunes</th>
+                  <th>Martes</th>
+                  <th>Miercoles</th>
+                  <th>Jueves</th>
+                  <th>Viernes</th>
+                  <th>Sabado</th>
+                  <th>Domingo</th>
+                </tr>
+              </thead>
+              <tbody id="calendarBody">
+              </tbody>
+            </table>
+            <div class="form-inline justify-content-center text-center">
+              <button class="btn btn-outline-primary col-sm-3" id="pre" onclick="pre()" style="margin-right:30px;">Anterior</button>
+              <button class="btn btn-outline-primary col-sm-3" id="nex" onclick="nex()">Siguiente</button>
+            </div>
           </div>
         </div>
-      </div>
+        <div class="container col-lg-4 justify-content-center text-center ">
+      </div>  
+  </div>
+</div>
+
+
+
 
       <div class="container justify-content-center text-center ">
       
@@ -214,7 +219,7 @@ session_start();
 
           </script>
   
-<!-- Footer -->
+
 
 <?php footer();?>
     

@@ -48,6 +48,7 @@ function login(){
 function footer(){
 echo <<< FAP
 <div class="footer">
+
       <div id='foot_left'>
       <ul>
         <li><a href='servicios.php'>Servicios</a></li>
