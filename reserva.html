@@ -9,7 +9,7 @@
 </head>
 <body>
   <br>
-
+  <br>
       <div class="container col-lg-4 justify-content-center text-center ">
         <h1 id = "mes">Reserva</h1>
         <div class="cal"&gt
@@ -30,7 +30,7 @@
             </tbody>
           </table>
           <div class="form-inline justify-content-center text-center">
-            <button class="btn btn-outline-primary col-sm-3" id="pre" onclick="pre()">Anterior</button>
+            <button class="btn btn-outline-primary col-sm-3" id="pre" onclick="pre()" style="margin-right:30px;">Anterior</button>
             <button class="btn btn-outline-primary col-sm-3" id="nex" onclick="nex()">Siguiente</button>
           </div>
         </div>
@@ -93,9 +93,18 @@
               var link = document.createElement("a");
               link.setAttribute('data-toggle','modal');
               link.setAttribute('data-target','#myModal');
+              link.setAttribute('onclick','confirma()');
+              link.style.padding = "12px";
+              
+
 
               var celda = document.createElement("td");
               
+              if (index+1 == td.getDay() && month == (new Date()).getMonth()) {
+                celda.style.backgroundColor = "grey";
+                
+              }
+
               var diacelda = document.createTextNode(index+1);
               link.appendChild(diacelda);
               celda.appendChild(link);
