@@ -1,9 +1,13 @@
 <?php
+error_reporting(E_ALL ^ E_NOTICE);  
+error_reporting(E_ERROR | E_PARSE);
+
 //incluimos las librerias que usaremos
 include('libreria_general.php');
 include("conectar_bd.php"); 
 //creacion de la sesion y variables necesarias
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -62,15 +66,184 @@ session_start();
           </form>
         </div>
       </nav>
+<<<<<<< HEAD
       
 <!-- nav -->
+=======
+  </span>
+  <!-- nav -->
+  <br>
 
-    <div class="cuerpo">
- <!-- Aqui va lo grueso ya tu sabe-->
+    <div class="container">
+      <div class="row">
+        <div class="col-5 ">
+              <h1 id = "mes"></h1>
+              <br>
+              <div class="cal"&gt
+                <br>
+                <table class="table table-bordered table-responsive-sm table-hover" id="calendar">
+                  <thead>
+                    <tr id = "headers">
+                      <th>Lunes</th>
+                      <th>Martes</th>
+                      <th>Miercoles</th>
+                      <th>Jueves</th>
+                      <th>Viernes</th>
+                      <th>Sabado</th>
+                      <th>Domingo</th>
+                    </tr>
+                  </thead>
+                  <tbody id="calendarBody">
+                  </tbody>
+                </table>
+                <div class="form-inline justify-content-center text-center">
+                  <button class="btn btn-outline-primary col-sm-3" id="pre" onclick="pre()" style="margin-right:30px;">Anterior</button>
+                  <button class="btn btn-outline-primary col-sm-3" id="nex" onclick="nex()">Siguiente</button>
+                </div>
+              </div>
+            </div>
+            <div class="container col-lg-4 justify-content-center text-center ">
+          </div>  
+      </div>
+    </div>
+>>>>>>> 1b90257a003c1d0e1cda630888d6ab931434640b
+
+
+      <div class="container justify-content-center text-center ">
       
-</div>
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            
+              <!-- Modal Header -->
+              <div class="modal-header justify-content-center text-center">
+                <h2>Confirmar Reserva</h2>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              
+              <!-- Modal body -->
+              <div class="modal-body" id="mensaje">
+                ¿Confrimamos su reserva para el siguiente dia?
+                <p id="infodate"></p>
+              </div>
+              
+              <!-- Modal footer -->
+              <div class="modal-footer">
+              
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" style="width:20%">No</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" style="width:20%">Sí</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+        <script>
+          
+          const td = new Date();
+          let month = td.getMonth();
+          let year = td.getFullYear();
+          calendar(month, year);
+
+
+          function calendar(month, years) {
+            daysweek = ["lun", "mar", "mié", "jue", "vie", "sáb", "dom"];
+            monthtw = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+            daysmonth = ["31", "28", "31", "30", "31", "30", "31", "31", "30", "31", "30", "31"];
+            elementmonth = document.getElementById("mes");
+            elementmonth.innerHTML = monthtw[month] +" "+ year;
+            var tabla = document.getElementById("calendarBody");
+            tabla.innerHTML = "";
+            
+            var diasemana = 1;
+            var fila = document.createElement("tr");
+
+
+            var fiw = new Date(years, month, 1);
+            let firstDay = fiw.toLocaleString('es-ES', { weekday: 'short' });
+
+            var empezamos = false;
+            let contador = 0;
+
+
+            for (; contador < daysweek.length; contador++) {
+              if(daysweek[contador] == firstDay){
+                break;
+              }
+            }
+            
+            let finacel = parseInt(daysmonth[month]) + contador;
+
+            for (let index = 0; index < finacel; index++) {
+              diacuadri = index + 1 - contador;
+
+              if (index!= 0 && index%7 == 0) {
+                var fila = document.createElement("tr");
+              }
+
+              var celda = document.createElement("td");
+              celda.setAttribute('class','td justify-content-center text-center');
+
+              if (index+1 == td.getDay() && month == (new Date()).getMonth()) {
+                celda.style.backgroundColor = "grey";
+                
+              }
+
+              var link = document.createElement("a");
+              link.setAttribute('data-toggle','modal');
+              link.setAttribute('data-target','#myModal');
+              link.setAttribute('onclick','  confirm(event); return false;');
+              link.style.padding = "12px";
+              
+              
+              if (index-contador > -1) {
+                var diacelda = document.createTextNode(diacuadri);
+                link.appendChild(diacelda);
+              }
+              
+              celda.appendChild(link);
+              fila.appendChild(celda);
+              
+
+              if (index%7 == 6 || index+1 == finacel) {
+
+                tabla.appendChild(fila);
+                
+              }
+            }
+          }
+
+          function pre() {
+            month = month -1;
+            
+            if (month < 0) {
+              month = 11;
+              year = year -1;
+            }   
+            calendar(month, year);
+            
+          }
+
+          function nex() {
+            month = month + 1;
+
+            if (month > 11) {
+              month = 0;
+              year = year + 1;
+            }
+
+            calendar(month, year);
+          }
+
+          function confirm(e) {
+            document.getElementById("infodate").innerHTML = e.target.innerText + " " + monthtw[month] + " " + year;
+          }
+          </script>
   
-<!-- Footer -->
+
 
 <?php footer();?>
     

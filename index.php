@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL ^ E_NOTICE);  
+error_reporting(E_ERROR | E_PARSE);
 //incluimos las librerias que usaremos
 include('libreria_general.php');
 include("conectar_bd.php"); 
