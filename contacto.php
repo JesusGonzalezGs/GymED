@@ -101,11 +101,17 @@ session_start();
       <br>
     </div>
    </div>
-   <div class="bg-secondary text-white">
-     <img src="src/telefono.jpg" alt="telefono" width="50px" height="50px">
-
-</div>
- 
+  </div>
+ <div class="bg-secondary text-white">
+     <div class="row">
+        <div class="col-1">
+          <img src="src/telefono.jpg" alt="telefono" width="150px" height="100px">
+        </div>
+        <div class="col-2" style="margin-top: 15px">
+          <br>
+          <p>&nbsp;&nbsp;TLF= 611 41 33 51</p>
+        </div>
+     </div>
  </div>
  
 </div>
