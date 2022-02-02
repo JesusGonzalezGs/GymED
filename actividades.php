@@ -7,6 +7,60 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Servicios</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <link href="carrousel.css" rel="stylesheet" type="text/css">
+<script>
+var current = 0;
+var imagenes = new Array();
+ 
+$(document).ready(function() {
+    var numImages = 6;
+    if (numImages <= 3) {
+        $('.right-arrow').css('display', 'none');
+        $('.left-arrow').css('display', 'none');
+    }
+ 
+    $('.left-arrow').on('click',function() {
+        if (current > 0) {
+            current = current - 1;
+        } else {
+            current = numImages - 3;
+        }
+ 
+        $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+ 
+        return false;
+    });
+ 
+    $('.left-arrow').on('hover', function() {
+        $(this).css('opacity','0.5');
+    }, function() {
+        $(this).css('opacity','1');
+    });
+ 
+    $('.right-arrow').on('hover', function() {
+        $(this).css('opacity','0.5');
+    }, function() {
+        $(this).css('opacity','1');
+    });
+ 
+    $('.right-arrow').on('click', function() {
+        if (numImages > current + 3) {
+            current = current+1;
+        } else {
+            current = 0;
+        }
+ 
+        $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+ 
+        return false;
+    }); 
+ });
+</script>
+  </head>
 <?php head();?>
 <body>
   
@@ -56,6 +110,68 @@ session_start();
 
     <div class="cuerpo">
  <!-- Aqui va lo grueso ya tu sabe-->
+      <body>
+      <p id="titulo">Ejercítate</p>
+      <p id="texto1">Muchotextomuchotexto muchotexto muchotextomuchotextomuchotextomuchotexto muchotextomuchotextomuchotexto muchotextomuchotextomuchotextomuchotextomuchotextomuchotextomuchotextomuchotexto muchotextomuchotextomuchotexto muchotextomuchotextomuchotextomuchotexto muchotextomuchotextomuchotextomuchotexto </p>
+    <div id="carrusel">
+        <a href="#" class="left-arrow"><img src="imagenes/left-arrow.png" /></a>
+        <a href="#" class="right-arrow"><img src="imagenes/right-arrow.png" /></a>
+        <div class="carrusel">
+            <div class="product" id="product_0">
+                <img src="imagenes/bodycombat.jpg" width="195" height="100" />
+                <h5>Body-combat</h5>
+                
+            </div>
+            <div class="product" id="product_1">
+                <img src="imagenes/prama.jpg" width="195" height="100" />
+                <h5>Pramma</h5>
+            </div>
+            <div class="product" id="product_2">
+                <img src="imagenes/spinning_monitor.jpg" width="195" height="100" />
+                <h5>Spinning</h5>
+            </div>
+            <div class="product" id="product_3">
+                <img src="imagenes/zumba.jpg" width="195" height="100" />
+                <h5>Pilates</h5>
+            </div>
+            <div class="product" id="product_4">
+                <img src="imagenes/Body-Pump.webp" width="195" height="100" />
+                <h5>Body-Pump</h5>
+            </div>
+            <div class="product" id="product_5">
+                <img src="imagenes/Piltaes.jpg" width="195" height="100" />
+                <h5>Pilates</h5>
+            </div>
+        </div>
+    </div>
+    <table class="default" border="1" id="tablita">
+        <tr>
+            <td>Clase</td>
+            <td>Horarios</td>
+        </tr>
+        <tr>
+            <th>Body-combat</th>
+            <th>xx:xx</th>
+        </tr>
+        <tr>
+            <th>Pramma</th>
+            <th>xx:xx</th>
+        </tr>
+        <tr>
+            <th>Spinning</th>
+            <th>xx:xx</th>
+        </tr>
+        <tr>
+            <th>Body-Pump</th>
+            <th>xx:xx</th>
+        </tr>
+        <tr>
+            <th>Pilates</th>
+            <th>xx:xx</th>
+        </tr>
+    </table>
+  </body>
+      
       
 </div>
   
