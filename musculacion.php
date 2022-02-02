@@ -7,64 +7,6 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-<meta name="description" content="GYMEd">
-<link rel="stylesheet" href="estilos.css" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src=
-"https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
-<link
-  rel="stylesheet"
-  href=
-"https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.css"
-/>
-<link
-  rel=
-"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
-  type="text/css"
-/>
-
-<script src=
-"https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
-</script>
-<script src=
-"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
-</script>
-
-<script src=
-"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js">
-</script>
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
-<style>
-  body {
-    text-align: center;
-    color: black;
-  }
-  h2 {
-    text-align: center;
-    font-family: "Verdana", sans-serif;
-    font-size: 40px;
-  }
-  #sr-only{
-    color: black;
-  }
-  img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-  #carrusel{
-    margin-left: 20%;
-    margin-right: 20%;
-  }
-</style>  
 <?php head();?>
 <body>
 
@@ -115,7 +57,7 @@ session_start();
     <div class="cuerpo">
  <!-- Aqui va lo grueso ya tu sabe-->
       <body>
-    <h1>Sala Musculacion</h1>
+    <h1 align="center">Sala Musculacion</h1>
     <div align="center" id="carrusel">
       
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -129,13 +71,13 @@ session_start();
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
           <div class="item active">
-              <img src="Imagenes/maquinas1.jpg" alt="" >
+              <img src="src/maquinas1.jpg" alt="" >
           </div>
           <div class="item">
-              <img src="Imagenes/maquinas2.jpg" alt="" >
+              <img src="src/maquinas2.jpg" alt="" >
           </div>
           <div class="item">
-              <img src="Imagenes/maquinas3.jpg" alt="" >
+              <img src="src/maquinas3.jpg" alt="" >
           </div>
       </div>
   
