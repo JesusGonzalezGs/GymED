@@ -244,6 +244,7 @@ session_start();
             var parrainfo = document.createTextNode(document.getElementById("infodate").innerHTML);
             parra.appendChild(parrainfo);
             parra.setAttribute('class','lead my-3');
+            parra.setAttribute('padding-bottom','20px');
             document.getElementById("reservs").appendChild(parra);
           }
 
