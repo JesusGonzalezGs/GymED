@@ -66,11 +66,7 @@ session_start();
           </form>
         </div>
       </nav>
-<<<<<<< HEAD
       
-<!-- nav -->
-=======
-  </span>
   <!-- nav -->
   <br>
 
@@ -106,7 +102,6 @@ session_start();
           </div>  
       </div>
     </div>
->>>>>>> 1b90257a003c1d0e1cda630888d6ab931434640b
 
 
       <div class="container justify-content-center text-center ">
