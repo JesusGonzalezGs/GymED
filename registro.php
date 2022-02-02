@@ -19,8 +19,8 @@ session_start();
     <script src="js/bootstrap.min.js"></script> 
 </head>
 <body>
-<span>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="index.php"><img src="src/Logo1.jpg" alt="" height="50" width="50"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -34,17 +34,17 @@ session_start();
                   Servicios
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Musculacion</a>
-                  <a class="dropdown-item" href="#">Actividades</a>
-                  <a class="dropdown-item" href="#">Piscina</a>
-                  <a class="dropdown-item" href="#">Complementos</a>
+                  <a class="dropdown-item" href="musculacion.php">Musculacion</a>
+                  <a class="dropdown-item" href="actividades.php">Actividades</a>
+                  <a class="dropdown-item" href="piscinas.php">Piscina</a>
+                  <a class="dropdown-item" href="complementos.php">Complementos</a>
                 </div>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Contacto</a>
+              <a class="nav-link" href="contacto.php">Contacto</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Reservas</a>
+              <a class="nav-link" href="reservas.php">Reservas</a>
             </li>
             
             </ul>
@@ -58,10 +58,6 @@ session_start();
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
-          
-          
-            
-          
         </div>
       </nav>
     <div class="cuerpo">

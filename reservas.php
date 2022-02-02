@@ -21,9 +21,8 @@ session_start();
 
 </head>
 <body>
-<span>
   <!-- nav -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="index.php"><img src="src/Logo1.jpg" alt="" height="50" width="50"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -39,32 +38,31 @@ session_start();
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="musculacion.php">Musculacion</a>
                   <a class="dropdown-item" href="actividades.php">Actividades</a>
-                  <a class="dropdown-item" href="piscina.php">Piscina</a>
+                  <a class="dropdown-item" href="piscinas.php">Piscina</a>
                   <a class="dropdown-item" href="complementos.php">Complementos</a>
                 </div>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="contactos">Contacto</a>
+              <a class="nav-link" href="contacto.php">Contacto</a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="reservas.php">Reservas</a>
             </li>
             
             </ul>
-            <!-- login -->
             <ul style = "list-style-type: none; margin: 0; padding: 0;">
             <li class="nav-item dropdown active">
             <?php login_nav(); ?>
           </li>
           </ul>
-          <!-- barra de busqueda -->
+          
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>  
+          </form>
         </div>
       </nav>
-          </span>
+      
 <!-- nav -->
 
     <div class="cuerpo">
