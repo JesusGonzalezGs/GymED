@@ -103,6 +103,7 @@ function head(){
      <!--css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href= "https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.css"/>
 
     <!--ICO & more -->
     <link rel="icon" type="image/png" sizes="32x32" href="src/logo/favicon-32x32.png">
@@ -111,11 +112,15 @@ function head(){
     <link rel="mask-icon" href="src/logo/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    
 
      <!--JS -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script> 
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js"></script>
     </head>
   FAP;
 }
