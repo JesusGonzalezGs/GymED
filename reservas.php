@@ -72,39 +72,53 @@ session_start();
   <!-- nav -->
   <br>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-5 ">
-              <h1 id = "mes"></h1>
-              <br>
-              <div class="cal"&gt
+      <div class="container">
+        <div class="row">
+          <div class="col-5 ">
+                <h2 id = "mes"></h2>
                 <br>
-                <table class="table table-bordered table-responsive-sm table-hover" id="calendar">
-                  <thead>
-                    <tr id = "headers">
-                      <th>Lunes</th>
-                      <th>Martes</th>
-                      <th>Miercoles</th>
-                      <th>Jueves</th>
-                      <th>Viernes</th>
-                      <th>Sabado</th>
-                      <th>Domingo</th>
-                    </tr>
-                  </thead>
-                  <tbody id="calendarBody">
-                  </tbody>
-                </table>
-                <div class="form-inline justify-content-center text-center">
-                  <button class="btn btn-outline-primary col-sm-3" id="pre" onclick="pre()" style="margin-right:30px;">Anterior</button>
-                  <button class="btn btn-outline-primary col-sm-3" id="nex" onclick="nex()">Siguiente</button>
+                <div class="cal"&gt
+                  <br>
+                  <table class="table table-bordered table-responsive-sm table-hover" id="calendar">
+                    <thead>
+                      <tr id = "headers">
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Miercoles</th>
+                        <th>Jueves</th>
+                        <th>Viernes</th>
+                        <th>Sabado</th>
+                        <th>Domingo</th>
+                      </tr>
+                    </thead>
+                    <tbody id="calendarBody">
+                    </tbody>
+                  </table>
+                  <div class="form-inline justify-content-center text-center">
+                    <button class="btn btn-outline-primary col-sm-3" id="pre" onclick="pre()" style="margin-right:30px;">Anterior</button>
+                    <button class="btn btn-outline-primary col-sm-3" id="nex" onclick="nex()">Siguiente</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container col-lg-2 justify-content-center text-center ">
+
+            </div>
+
+            <div class="container col-lg-5 justify-content-center text-center ">
+              <h2>Reservas</h2>
+              <br>
+              <div class="p-2 mb-4 text-white rounded" style ="background-color:grey;">
+                <div>
+                  <h1 class="display-4 fst-italic"></h1>
+                  <p class="lead my-3">18 Marzo 2022.
+                    
+                  </p>
                 </div>
               </div>
             </div>
-            <div class="container col-lg-4 justify-content-center text-center ">
-          </div>  
+        </div>
       </div>
-    </div>
-
 
       <div class="container justify-content-center text-center ">
       
@@ -122,7 +136,7 @@ session_start();
               <!-- Modal body -->
               <div class="modal-body" id="mensaje">
                 ¿Confrimamos su reserva para el siguiente dia?
-                <p id="infodate"></p>
+                <p ><b id="infodate"></b></p>
               </div>
               
               <!-- Modal footer -->
@@ -138,7 +152,7 @@ session_start();
         
       </div>
 
-        <script>
+      <script>
           
           const td = new Date();
           let month = td.getMonth();
@@ -242,7 +256,7 @@ session_start();
   
 
 
-<?php footer();?>
-    
-</body>
+  
+    <?php footer();?>
+  </body>
 </html>
