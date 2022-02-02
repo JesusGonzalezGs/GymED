@@ -96,8 +96,8 @@ session_start();
               <br>
               <div class="p-2 mb-4 text-white rounded" style ="background-color:grey;">
                 <div>
-                  <h1 class="display-4 fst-italic"></h1>
-                  <p class="lead my-3">18 Marzo 2022.
+                  <h1 class="display-4 fst-italic" ></h1>
+                  <p class="lead my-3" id="reservs">18 Marzo 2022
                     
                   </p>
                 </div>
@@ -129,7 +129,7 @@ session_start();
               <div class="modal-footer">
               
                 <button type="button" class="btn btn-secondary" data-dismiss="modal" style="width:20%">No</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal" style="width:20%">Sí</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" style="width:20%" onclick="addres(); return false;">Sí</button>
               </div>
               
             </div>
@@ -238,11 +238,16 @@ session_start();
           function confirm(e) {
             document.getElementById("infodate").innerHTML = e.target.innerText + " " + monthtw[month] + " " + year;
           }
+
+          function addres(){
+            var parra = document.createElement("p");
+            var parrainfo = document.createTextNode(document.getElementById("infodate"));
+            parra.appendChild(parrainfo);
+            parra.setAttribute('class','lead my-3');
+            document.getElementById("reservs").appendChild(parra);
+          }
+
           </script>
-  
-
-
-  
     <?php footer();?>
   </body>
 </html>
