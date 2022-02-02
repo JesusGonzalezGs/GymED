@@ -241,7 +241,7 @@ session_start();
 
           function addres(){
             var parra = document.createElement("p");
-            var parrainfo = document.createTextNode(document.getElementById("infodate"));
+            var parrainfo = document.createTextNode(document.getElementById("infodate").innerHTML);
             parra.appendChild(parrainfo);
             parra.setAttribute('class','lead my-3');
             document.getElementById("reservs").appendChild(parra);
