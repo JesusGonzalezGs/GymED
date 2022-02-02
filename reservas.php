@@ -11,20 +11,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gimnasio ED</title>
-    <link rel="shortcut icon" href="src/img/LOGO_SMALL.ico">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script> 
-
-
-</head>
+<?php head();?>
 <body>
   <!-- nav -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
