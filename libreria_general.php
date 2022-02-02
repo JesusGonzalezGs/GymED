@@ -91,4 +91,32 @@ function error_reg(){
       break;      
     }
 }
+
+function head(){
+  echo <<<FAP
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimnasio ED</title>
+    
+     <!--css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--ICO & more -->
+    <link rel="icon" type="image/png" sizes="32x32" href="src/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/logo/favicon-16x16.png">
+    <link rel="manifest" href="src/logo/site.webmanifest">
+    <link rel="mask-icon" href="src/logo/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+     <!--JS -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
+    </head>
+  FAP;
+}
 ?>
