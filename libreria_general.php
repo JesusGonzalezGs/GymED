@@ -101,9 +101,10 @@ function head(){
     <title>Gimnasio ED</title>
     
      <!--css -->
+    <link rel="stylesheet" href= "https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.css"/>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href= "https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.css"/>
+    
 
     <!--ICO & more -->
     <link rel="icon" type="image/png" sizes="32x32" href="src/logo/favicon-32x32.png">
