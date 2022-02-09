@@ -37,7 +37,7 @@ if($_SESSION["login"] == true){
     if ($respuesta == 1){
         $_SESSION['login'] = true;
         $_SESSION["nombre"] = $user;
-        header('Location:' . 'index.php');
+        header('Location:'.'index.php');
         die();
     }else{
         //el error 4 significa problema relacionado con la base de datos

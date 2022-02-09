@@ -60,8 +60,8 @@ echo <<< FAP
      
       <div id='foot_right'>
       <ul >
-        <li><a href='pilitica.php'>Politica de privacidad</a></li>
-        <li><a href='cookies.php'>Cookies</a></li>
+        <li><a href='politica.php'>Politica de privacidad</a></li>
+        <li><a href='politica.php'>Cookies</a></li>
         <li><a href='faq.php'>FAQ</a></li>
         <li><a href='index.php'><img src="src\img\FULL_LOGO.png" alt="" height="40" width="150"></a></li>
       </ul>
@@ -124,5 +124,23 @@ function head(){
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js"></script>
     </head>
   FAP;
+}
+
+function acceso_usuario(){
+  if($_SESSION["login"] != true){
+    //mensase de error "no tienes acceso si no estas logueado"
+    $_SESSION['error_log'] = 0;
+    header('Location:'.'login.php');
+    die();
+  }
+}
+
+function acceso_admin(){
+  if($_SESSION["login"] != true || $_SESSION["nombre"] != "admin"){
+    //mensase de error "solo los administradores tienen acceso"
+    $_SESSION['error_log'] = 4;
+    header('Location:'.'login.php');
+    die();
+  }
 }
 ?>

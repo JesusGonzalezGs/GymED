@@ -23,12 +23,15 @@ $respuesta = mysqli_query($con,$sentencia);
 while ( $rows = $respuesta->fetch_assoc() ) {
     $hash= $rows[hash_pwd];
     $user=$rows[nombre];
+    $id = $rows[id];
 }
 //compruebo que los hases son los mismos 
 if ($passwd == $hash){
     echo "logueado correctamente";
     $_SESSION["login"] = true;
+    $_SESSION["email"] = $email;
     $_SESSION["nombre"] = $user;
+    $_SESSION["id"]= $id;
 }else {
     echo "login no correcto";
     $_SESSION['problema'] = "usuario o contrasenya invalidos";
